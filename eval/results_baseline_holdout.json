@@ -1,0 +1,45 @@
+{
+ "n_scenarios": 15,
+ "peril_accuracy": 0.5333333333333333,
+ "excess_accuracy": 0.6,
+ "red_flag_precision": 1.0,
+ "red_flag_recall": 1.0,
+ "escape_of_water_correct_clause_cited": "2/2",
+ "misclassified": [
+  {
+   "claim": "Toilet cistern overflowed and water dripped into the living room",
+   "expected": "escape_of_water",
+   "got": null
+  },
+  {
+   "claim": "Hot water cylinder split in the airing cupboard",
+   "expected": "escape_of_water",
+   "got": null
+  },
+  {
+   "claim": "Thieves took the lawnmower from the garden shed",
+   "expected": "theft",
+   "got": null
+  },
+  {
+   "claim": "Heavy snow collapsed the garage roof",
+   "expected": "storm",
+   "got": null
+  },
+  {
+   "claim": "Burglar forced the patio door, nothing taken but the lock was broken",
+   "expected": "theft",
+   "got": null
+  },
+  {
+   "claim": "Kitchen tap left running and the sink overflowed",
+   "expected": "escape_of_water",
+   "got": null
+  },
+  {
+   "claim": "Window smashed by a stone thrown up by the lawnmower",
+   "expected": "accidental_damage",
+   "got": "storm"
+  }
+ ]
+}

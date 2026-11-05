@@ -1,0 +1,127 @@
+{
+  "corpus": {
+    "insurers": 4,
+    "pdf_pages": 283,
+    "chunks": 997
+  },
+  "retrieval": {
+    "n_questions": 42,
+    "configs": {
+      "dense only": {
+        "hit@1": 0.35714285714285715,
+        "hit@3": 0.6428571428571429,
+        "hit@5": 0.7380952380952381,
+        "mrr": 0.49642857142857144
+      },
+      "BM25 only": {
+        "hit@1": 0.4523809523809524,
+        "hit@3": 0.6428571428571429,
+        "hit@5": 0.7142857142857143,
+        "mrr": 0.5484126984126985
+      },
+      "hybrid (dense+BM25)": {
+        "hit@1": 0.40476190476190477,
+        "hit@3": 0.6904761904761905,
+        "hit@5": 0.7857142857142857,
+        "mrr": 0.5555555555555556
+      },
+      "hybrid + insurance synonyms": {
+        "hit@1": 0.5476190476190477,
+        "hit@3": 0.8333333333333334,
+        "hit@5": 0.9523809523809523,
+        "mrr": 0.694047619047619
+      }
+    }
+  },
+  "claims": {
+    "n_scenarios": 30,
+    "peril_accuracy": 0.8333333333333334,
+    "excess_accuracy": 0.8666666666666667,
+    "red_flag_precision": 1.0,
+    "red_flag_recall": 0.8888888888888888,
+    "escape_of_water_correct_clause_cited": "8/8",
+    "misclassified": [
+      {
+        "claim": "Damp patch spreading for months behind the shower, tiles now loose",
+        "expected": "escape_of_water",
+        "got": null
+      },
+      {
+        "claim": "Water got behind the bath because the silicone sealant had failed",
+        "expected": "escape_of_water",
+        "got": null
+      },
+      {
+        "claim": "Rainwater overflowing from a blocked gutter came through the wall",
+        "expected": "escape_of_water",
+        "got": null
+      },
+      {
+        "claim": "Lightning strike damaged the TV aerial and the boiler",
+        "expected": "storm",
+        "got": "escape_of_water"
+      },
+      {
+        "claim": "Someone smashed a window and took the bike from the hallway",
+        "expected": "theft",
+        "got": "storm"
+      }
+    ]
+  },
+  "pii": {
+    "synthetic_records": 200,
+    "pii_values": 523,
+    "pii_recall": 0.9617590822179732,
+    "leaked_values": 20,
+    "leaked_examples": [
+      "Paid by card 5500-0000-0000-0004; contact (0113) 496 0163 or james.murphy@example.com.",
+      "Client James Patel called from (0113) 496 0249 about the leak.",
+      "Client Daniel Gallagher called from (0113) 496 0374 about the leak."
+    ],
+    "policy_chunks_scanned": 997,
+    "policy_chunks_altered": 126,
+    "policy_chunk_alteration_rate": 0.12637913741223672,
+    "tags_in_policy_text": {
+      "CARD_NUMBER": 10,
+      "PHONE": 140,
+      "POSTCODE": 61,
+      "EMAIL": 30,
+      "ACCOUNT_NUMBER": 2
+    }
+  },
+  "guardrails": {
+    "tool_responses": 82,
+    "responses_with_disclaimer": 82,
+    "coverage_responses_with_citations": "72/72",
+    "drafts_created": 20,
+    "drafts_sent_without_human_approval": 0,
+    "drafts_with_pii_left_in_body": 0,
+    "latency_ms": {
+      "search_policy_wording": {
+        "p50": 164.0,
+        "p95": 184.3,
+        "n": 42
+      },
+      "check_claim_eligibility": {
+        "p50": 324.4,
+        "p95": 348.9,
+        "n": 30
+      },
+      "get_client_policies": {
+        "p50": 0.3,
+        "p95": 0.7,
+        "n": 7
+      },
+      "compare_coverage": {
+        "p50": 635.0,
+        "p95": 640.9,
+        "n": 3
+      },
+      "draft_client_email": {
+        "p50": 1.8,
+        "p95": 7.0,
+        "n": 20
+      }
+    }
+  }
+}

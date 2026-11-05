@@ -1,0 +1,30 @@
+[
+  {
+    "doc_id": "rias_home",
+    "insurer": "RIAS",
+    "product": "Home Insurance Policy Booklet",
+    "url": "https://www.rias.co.uk/globalassets/rias/assets/policy-documents/home/rias-home-insurance-policy-booklet_current.pdf",
+    "filename": "rias_home.pdf"
+  },
+  {
+    "doc_id": "esure_home",
+    "insurer": "esure",
+    "product": "Home Core Policy Booklet",
+    "url": "https://www.esure.com/sites/esure/files/inline-files/esure%20Home%20Core%20policy%20booklet.pdf",
+    "filename": "esure_home.pdf"
+  },
+  {
+    "doc_id": "aviva_home",
+    "insurer": "Aviva",
+    "product": "Home Insurance Policy Wording",
+    "url": "https://www.online.aviva.co.uk/StaticDocsAV/Home_wording_default_v7.pdf",
+    "filename": "aviva_home.pdf"
+  },
+  {
+    "doc_id": "aa_home",
+    "insurer": "AA",
+    "product": "Home Insurance Policy Booklet",
+    "url": "https://www.theaa.com/~/media/the-aa/pdf/insurance/tiers/aa-home-insurance-policy-booklet-current.pdf",
+    "filename": "aa_home.pdf"
+  }
+]
